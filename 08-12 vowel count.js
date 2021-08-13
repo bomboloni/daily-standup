@@ -3,7 +3,7 @@
 // No Regex! Unless that is your brute force...
 
 const vowelCount = (str) => {
-  const vowels = ['a', 'e', 'i', 'o', 'u']
+  const vowels = 'aeiouAEIOU' //['a', 'e', 'i', 'o', 'u']
   let count = 0
 
   for (let char of str) {
