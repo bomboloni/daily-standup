@@ -7,7 +7,7 @@ const magazine =
 
 const ransom = (note, mag) => {
   // creates an object of word : wordCount, filters out junk
-  const objectifyStr = (str) => {
+  const objectify = (str) => {
     const regex = /[^a-z0-9\s']/g
     const obj = {}
     const arr = str.toLowerCase().replace(regex, '').split(' ')
@@ -17,8 +17,8 @@ const ransom = (note, mag) => {
     return obj
   }
 
-  const noteObj = objectifyStr(note)
-  const magObj = objectifyStr(mag)
+  const noteObj = objectify(note)
+  const magObj = objectify(mag)
   const noteArr = Object.keys(noteObj)
   let result = true
 
