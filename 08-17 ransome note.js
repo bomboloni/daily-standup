@@ -11,8 +11,8 @@ const ransom = (note, mag) => {
   // creates an object of word : num, filters out junk
   const process = (str) => {
     const obj = {}
-    str = str.toLowerCase().replace(regex, '').trim().split(' ')
-    for (word of str) {
+    const arr = str.toLowerCase().replace(regex, '').trim().split(' ')
+    for (word of arr) {
       obj[word] = obj[word] + 1 || 1
     }
     return obj
