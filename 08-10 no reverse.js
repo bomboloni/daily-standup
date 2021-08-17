@@ -9,12 +9,12 @@ console.log(nr('hello'))
 
 // another  solution:
 
-// const nr = (str) => {
-//   let x = ''
-//   for (let char of str) {
-//     x = char + x
-//   }
-//   return x
-// }
+const noRev = (str) => {
+  let x = ''
+  for (let char of str) {
+    x = char + x
+  }
+  return x
+}
 
-// console.log(nr('hello'))
+console.log(noRev('hello'))
