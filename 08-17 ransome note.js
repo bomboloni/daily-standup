@@ -10,7 +10,7 @@ const ransom = (note, mag) => {
   const objectifyStr = (str) => {
     const regex = /[^a-z0-9\s']/g
     const obj = {}
-    const arr = str.toLowerCase().replace(regex, '').trim().split(' ')
+    const arr = str.toLowerCase().replace(regex, '').split(' ')
     for (word of arr) {
       obj[word] = obj[word] + 1 || 1
     }
