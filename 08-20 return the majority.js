@@ -13,13 +13,13 @@
 
 const majority = (arr) => {
   let elements = {}
-  let max = 0
+  let target = arr.length / 2
   let result
 
   for (el of arr) {
     elements[el] = elements[el] + 1 || 1
-    if (elements[el] > max) {
-      result = el
+    if (elements[el] > target) {
+      return (result = el)
     }
   }
   return result
