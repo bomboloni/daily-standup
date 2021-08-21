@@ -27,3 +27,31 @@ const majority = (arr) => {
 
 console.log(majority([3, 2, 3]), 3)
 console.log(majority([2, 2, 1, 1, 1, 2, 2]), 2)
+
+// other solutions that I didn't write:
+// this one returns the element that appears the most even if it's not a majority
+function majorityElement(nums) {
+  let obj = {}
+  nums.forEach((n) => {
+    if (n in obj) obj[n]++
+    else obj[n] = 0
+  })
+  return Object.keys(obj).reduce((a, b) => (obj[a] > obj[b] ? a : b))
+}
+
+console.log(majorityElement([3, 2, 3]), 3)
+console.log(majorityElement([2, 2, 1, 1, 1, 2, 2]), 2)
+
+// this on solves the problem correctly
+function majElement(nums) {
+  let obj = {}
+
+  nums.forEach((n) => {
+    n in obj ? obj[n]++ : (obj[n] = 1)
+  })
+
+  return Object.keys(obj).filter((key) => obj[key] > nums.length / 2 && key)
+}
+
+console.log(majElement([3, 2, 3]), 3)
+console.log(majElement([2, 2, 1, 1, 1, 2, 2]), 2)
