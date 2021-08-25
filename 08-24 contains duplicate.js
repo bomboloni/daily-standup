@@ -13,18 +13,22 @@
 // Input: nums = [1,1,1,3,3,4,3,2,4,2]
 // Output: true
 
-// const dupes = (nums) => {
-//   const hash = {}
+const hasDupes = (nums) => {
+  const hash = {}
 
-//   for (num of nums) {
-//     if (hash[num]) {
-//       return true
-//     } else {
-//       hash[num] = 1
-//     }
-//   }
-//   return false
-// }
+  for (num of nums) {
+    if (hash[num]) {
+      return true
+    } else {
+      hash[num] = 1
+    }
+  }
+  return false
+}
+
+console.log(hasDupes([1, 2, 3, 1]), true)
+console.log(hasDupes([1, 2, 3, 4]), false)
+console.log(hasDupes([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]), true)
 
 const dupes = (nums) => {
   const hash = {}
