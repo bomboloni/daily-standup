@@ -46,3 +46,7 @@ const change = (coins, amt) => {
 console.log(change([25, 10, 5], 0), 0)
 console.log(change([25, 5, 10], 40), 3)
 console.log(change([25, 10, 5], 35), 2)
+
+/*
+Bianca from Frontend Masters cautions against the greedy approach because it can seem correct but can be hard to tell if it really is correct
+*/
