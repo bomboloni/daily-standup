@@ -22,18 +22,20 @@
 
 // F(0)=0 F(1)=1 F(2)=1 F(3)=2 F(4)=3 F(5)=5 F(6)=8 F(7)=13
 
-// const fib = (n) => {
-
-//   if (n < 2) {
-//     return n
-//   } else {
-//     return fib(n - 1) + fib(n - 2)
-//   }
-// }
-
-const fib = (n) => (n < 2 ? n : fib(n - 1) + fib(n - 2))
+const fib = (n) => {
+  if (n < 2) {
+    return n
+  } else {
+    return fib(n - 1) + fib(n - 2)
+  }
+}
 
 console.log(fib(2), 1)
 console.log(fib(3), 2)
 console.log(fib(4), 3)
 console.log(fib(7), 13)
+
+// prettier-ignore
+const fib2 = n => n < 2 ? n : fib(n - 1) + fib(n - 2)
+
+console.log(fib2(7), 13)
