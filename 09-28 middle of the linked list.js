@@ -31,10 +31,10 @@
  */
 
 const middleNode = (head) => {
-  let slower = head
-  let faster = head
+  let slower = this.head
+  let faster = this.head
 
-  while (faster !== null && faster.next !== null) {
+  while (faster && faster.next) {
     faster = faster.next.next
     slower = slower.next
   }
