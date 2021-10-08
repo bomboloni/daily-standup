@@ -4,9 +4,10 @@
 
 // Hint: Remember how we grabbed individual letters from the string in yesterday's problem. Combine that with modifying the first to be upper case.
 
-const capitalizeWord = (word) => word[0].toUpperCase() + word.slice(1)
+const capitalizeWord = (word) =>
+  word[0].toUpperCase() + word.slice(1).toLowerCase()
 
-console.log(capitalizeWord('word'), 'Word')
+console.log(capitalizeWord('woRd'), 'Word')
 
 //   arr = word.split('')
 //   arr[0].toUpperCase
