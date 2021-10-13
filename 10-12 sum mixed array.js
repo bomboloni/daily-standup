@@ -15,4 +15,7 @@ const sumMix = (arr) => arr.reduce((sum, curr) => sum + +curr, 0) //reduce((s, e
 
 console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]), 42)
 
+//  Leon's answer: arr.reduce((a. c)  => a + Number(c), 0)
+// He chose Number() because he thought it made the code clear
+
 //  const sumMix=x=>x.reduce((a,b)=>+b+a,0)
