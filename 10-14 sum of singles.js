@@ -15,9 +15,16 @@
 // step 1: filter out numbers that appear more than once
 // step 2: reduce the remaining numbers
 
-const repeats = (arr) => {
-  arrSingles = arr.filter((e) => arr.indexOf(e) === arr.lastIndexOf(e))
-  return arrSingles.reduce((a, c) => a + c, 0)
-}
+// const repeats = (arr) => {
+//   arrSingles = arr.filter((e) => arr.indexOf(e) === arr.lastIndexOf(e))
+//   return arrSingles.reduce((a, c) => a + c, 0)
+// }
+
+const repeats = (arr) =>
+  arr
+    .filter((e) => arr.indexOf(e) === arr.lastIndexOf(e))
+    .reduce((a, c) => a + c, 0)
 
 console.log(repeats([4, 5, 7, 5, 4, 8]), 15)
+
+// Hint: Filter the items where the index  equals the last index of and then reduce the sum
