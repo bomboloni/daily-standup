@@ -6,16 +6,24 @@
 // "Success"  =>  ")())())"
 // "(( @"     =>  "))(("
 
-function encode(str) {
-  let x = str.toLowerCase()
+// function encode(str) {
+//   let x = str.toLowerCase()
 
-  return x
-    .split('')
-    .map((e) => (x.indexOf(e) === x.lastIndexOf(e) ? '(' : ')'))
-    .join('')
-}
+//   return x
+//     .split('')
+//     .map((e) => (x.indexOf(e) === x.lastIndexOf(e) ? '(' : ')'))
+//     .join('')
+// }
 
 //  I was failing when I tried this as a one-liner because map() was checking against the original str, not the toLowerCase() version. What would have worked would be using the array parameter within map(). Map can take up to three parameters: (element, index, array). Array would have referred back to what I had created when I split() str
+
+function encode(str) {
+  return str
+    .toLowerCase()
+    .split('')
+    .map((e, _i, r) => (r.indexOf(e) === r.lastIndexOf(e) ? '(' : ')'))
+    .join('')
+}
 
 console.log(encode('nPP(HP@JPPPPwPa'), '())(()(())))()(')
 console.log(encode('Success'), ')())())')
