@@ -23,8 +23,14 @@
 //   return arr.filter((e) => !mixedArr.includes(e))[0] || 0
 // }
 
-const findMissing = (arr, mixedArr) =>
-  arr.filter((e) => !mixedArr.includes(e))[0] || 0
+// const findMissing = (arr, mixedArr) =>
+//   arr.filter((e) => !mixedArr.includes(e))[0] || 0
+
+const findMissing = (arr, mixArr) => {
+  if (arr.length === mixArr.length || arr === []) return 0
+  const sum = (x) => x.reduce((a, b) => a + b)
+  return sum(arr) - sum(mixArr)
+}
 
 console.log(findMissing([1, 2, 3, 4, 5], [3, 4, 1, 5]), 2)
 console.log(
