@@ -20,8 +20,15 @@
 //      return the result
 //      make sure if there were no matching items that an empty array is returned
 
+// function diff(arr1, arr2) {
+//   return arr1.filter((e) => !arr2.includes(e))
+// }
+
+// Leon's more efficient version:
+
 function diff(arr1, arr2) {
-  return arr1.filter((e) => !arr2.includes(e))
+  let set = new Set(arr2)
+  return arr1.filter((e) => !set.has(e))
 }
 
 console.log(diff([1, 2, 2, 2, 3], [2]), [1, 3])
