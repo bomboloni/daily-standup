@@ -29,5 +29,9 @@ function gimmie(arr) {
 //     (e) => e !== Math.min(...inputArray) && e !== Math.max(...inputArray)
 //   )
 
+//refactored
+// const gimmie = (arr) =>
+//   arr.findIndex((e) => e !== Math.min(...arr) && e !== Math.max(...arr))
+
 console.log(gimmie([2, 3, 1]), 0)
 console.log(gimmie([5, 10, 14]), 1)
