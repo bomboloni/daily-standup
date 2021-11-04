@@ -25,7 +25,7 @@
 // const averageify = (arr) =>
 //   arr.map((e) => e[0].repeat(Math.round(arr.join('').length / arr.length)))
 
-// with a constfor readability, and as a function for practice
+// with a const for readability, and as a function for practice
 function averageify(arr) {
   const average = Math.round(arr.join('').length / arr.length)
   return arr.map((e) => e[0].repeat(average))
