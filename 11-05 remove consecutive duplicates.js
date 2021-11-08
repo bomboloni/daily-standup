@@ -20,7 +20,7 @@ function removeDupes(str) {
 
 console.log(
   removeDupes(
-    'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'
+    'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta delta'
   ),
   'alpha beta gamma delta alpha beta gamma delta'
 )
