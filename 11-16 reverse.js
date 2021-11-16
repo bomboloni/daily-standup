@@ -31,8 +31,10 @@ function rev3(str) {
 
 const rev4 = (str) => [...str].map((_, i, r) => r[r.length - 1 - i]).join('')
 
-// this does not work yet
-// const reverse = (str) => [...str].map(str.pop, str)
+const rev5 = (str) => {
+  const arr = [...str]
+  return [...arr].map(arr.pop, arr).join('')
+}
 
 // codewars - brevity is the soul of wit, 3 kyu
 // reverse=a=>[...a].map(a.pop,a)
@@ -41,4 +43,4 @@ console.log(rev1('hello'), '| olleh')
 console.log(rev2('hello'), '| olleh')
 console.log(rev3('hello'), '| olleh')
 console.log(rev4('hello'), '| olleh')
-// console.log(reverse('hello'), '| olleh')
+console.log(rev5('hello'), '| olleh')
