@@ -36,6 +36,10 @@ const rev5 = (str) => {
   return [...arr].map(arr.pop, arr).join('')
 }
 
+function revArr(arr) {
+  return arr.map((_, i, arr) => arr[arr.length - 1 - i])
+}
+
 // codewars - brevity is the soul of wit, 3 kyu
 // reverse=a=>[...a].map(a.pop,a)
 
@@ -44,3 +48,4 @@ console.log(rev2('hello'), '| olleh')
 console.log(rev3('hello'), '| olleh')
 console.log(rev4('hello'), '| olleh')
 console.log(rev5('hello'), '| olleh')
+console.log(revArr(['h', 'e', 'l', 'l', 'o']), ['o', 'l', 'l', 'e', 'h'])
