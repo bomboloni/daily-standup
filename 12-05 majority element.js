@@ -34,7 +34,7 @@ function majorityEl(nums) {
 // tricky but possibly less efficient way:
 const majorityEl2 = (nums) => {
   const sorted = nums.sort()
-  return sorted[Math.round(nums.length / 2)]
+  return sorted[Math.floor(nums.length / 2)]
 }
 
 // Leon's way:
@@ -44,7 +44,7 @@ function majorityEl3(arr) {
     majElem = arr[0]
 
   for (const num of arr) {
-    arr[num] = arr[num] + 1 || 1
+    elem[num] = elem[num] + 1 || 1
   }
 
   for (const n in elem) {
@@ -56,9 +56,16 @@ function majorityEl3(arr) {
   return majElem
 }
 
-console.log(majorityEl([3, 2, 3]), 3)
-console.log(majorityEl([2, 2, 1, 1, 1, 2, 2]), 2)
-console.log(majorityEl2([3, 2, 3]), 3)
-console.log(majorityEl2([2, 2, 1, 1, 1, 2, 2]), 2)
-console.log(majorityEl3([3, 2, 3]), 3)
-console.log(majorityEl3([2, 2, 1, 1, 1, 2, 2]), 2)
+console.log(majorityEl([6, 5, 5]), 5)
+console.log(majorityEl2([6, 5, 5]), 5)
+console.log(majorityEl3([6, 5, 5]), 5)
+console.log(majorityEl([1]), 1)
+console.log(majorityEl2([1]), 1)
+console.log(majorityEl3([1]), 1)
+
+// console.log(majorityEl([3, 2, 3]), 3)
+// console.log(majorityEl([2, 2, 1, 1, 1, 2, 2]), 2)
+// console.log(majorityEl2([3, 2, 3]), 3)
+// console.log(majorityEl2([2, 2, 1, 1, 1, 2, 2]), 2)
+// console.log(majorityEl3([3, 2, 3]), 3)
+// console.log(majorityEl3([2, 2, 1, 1, 1, 2, 2]), 2)
