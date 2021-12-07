@@ -27,7 +27,7 @@ const makeHash = (x) => {
   return tempHash
 }
 
-function ransomeNote(str, mag) {
+function ransomNote(str, mag) {
   let result = true
   const magHash = makeHash(mag)
   const noteHash = makeHash(str)
@@ -40,7 +40,7 @@ function ransomeNote(str, mag) {
   return result
 }
 
-console.log(ransomeNote('sit ad est sint', magazine), true)
-console.log(ransomeNote('sit ad est love', magazine), false)
-console.log(ransomeNote('sit ad est sint in in', magazine), true)
-console.log(ransomeNote('sit ad est sint in in in in', magazine), false)
+console.log(ransomNote('sit ad est sint', magazine), true)
+console.log(ransomNote('sit ad est love', magazine), false)
+console.log(ransomNote('sit ad est sint in in', magazine), true)
+console.log(ransomNote('sit ad est sint in in in in', magazine), false)
