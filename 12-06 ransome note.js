@@ -40,7 +40,28 @@ function ransomNote(str, mag) {
   return result
 }
 
-console.log(ransomNote('sit ad est sint', magazine), true)
-console.log(ransomNote('sit ad est love', magazine), false)
-console.log(ransomNote('sit ad est sint in in', magazine), true)
-console.log(ransomNote('sit ad est sint in in in in', magazine), false)
+// following Leon's suggestion:
+function ransomNote2(note, mag) {
+  const magHash = makeHash(mag)
+  let result = true
+  note = note.split(' ')
+
+  for (word of note) {
+    if (magHash[word] > 0) {
+      magHash[word] -= 1
+    } else {
+      result = false
+    }
+  }
+  return result
+}
+
+// console.log(ransomNote('sit ad est sint', magazine), true)
+// console.log(ransomNote('sit ad est love', magazine), false)
+// console.log(ransomNote('sit ad est sint in in', magazine), true)
+// console.log(ransomNote('sit ad est sint in in in in', magazine), false)
+
+console.log(ransomNote2('sit ad est sint', magazine), true)
+console.log(ransomNote2('sit ad est love', magazine), false)
+console.log(ransomNote2('sit ad est sint in in', magazine), true)
+console.log(ransomNote2('sit ad est sint in in in in', magazine), false)
