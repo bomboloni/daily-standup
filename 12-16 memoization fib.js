@@ -45,8 +45,23 @@ function memoFib(n) {
   return fib(n)
 }
 
+// Leon's version:
+const cache = {}
+function memofib2(n) {
+  if (n <= 1) {
+    return n
+  } else if (cache[n]) {
+    return cache[n]
+  } else {
+    let result = memofib2(n - 1) + memofib2(n - 2)
+    cache[n] = result
+    return result
+  }
+}
+
 // console.log(memoFib(1), 1)
 // console.log(memoFib(2), 1)
 // console.log(memoFib(3), 2)
 // console.log(memoFib(4), 3)
 console.log(memoFib(5))
+console.log(memoFib2(5))

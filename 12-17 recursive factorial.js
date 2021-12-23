@@ -23,5 +23,19 @@ function fact(n) {
   return n * fact(n - 1)
 }
 
+// Leon's solution:
+
+function fact2(n) {
+  return n < 2 ? 1 : n * fact2(n - 1)
+}
+
+// just for fun
+
+const fact3 = (n) => (n < 2 ? 1 : n * fact3(n - 1))
+
 console.log(fact(0), 1)
 console.log(fact(5), 120)
+console.log(fact2(0), 1)
+console.log(fact2(5), 120)
+console.log(fact3(0), 1)
+console.log(fact3(5), 120)
